@@ -1,0 +1,14 @@
+.keys{
+    width: 40%;
+    float: left;
+    display: block;
+    text-align: end;
+}
+.values{
+    width: 40%;
+    float: left;
+    display: block;
+}
+table, th, td {
+    border: 1px solid black;
+  }

@@ -1,0 +1,42 @@
+<form>
+                
+<div class="maindiv">
+        <span  class="keys">FirstName: </span>
+        <span><input type="text" placeholder="First Name" [(ngModel)]="reqobj.FirstNmae" required name="fn"> </span>
+</div>
+<div class="maindiv">
+        <span  class="keys">MiddleName: </span>
+        
+<span  class="values"><input type="text" placeholder="Middle Name" [(ngModel)]="reqobj.MiddleName" name="mn"></span>
+</div>
+<div class="maindiv">
+        <span  class="keys">LastName: </span>
+<span  class="values"><input type="text"  placeholder="Last Name" [(ngModel)]="reqobj.LastName" name="ln"></span>
+</div>
+<div class="maindiv">
+        <span  class="keys">Email: </span>
+        
+<span  class="values"><input type="email"  placeholder="Email" [(ngModel)]="reqobj.Email" name="em"></span>
+</div>
+<div class="maindiv">
+        <span  class="keys">Mobile: </span>
+        
+<span  class="values"><input type="number"  placeholder="Mobile Number" [(ngModel)]="reqobj.Mobile " name="mo"></span>
+</div>
+<div class="maindiv">
+        <span  class="keys">Password: </span>
+        
+<span  class="values"><input type="password"  placeholder="Password" [(ngModel)]="reqobj.Password" name="pw"></span>
+</div>
+<div class="maindiv">
+        <span  class="keys">ConfirmPassword: </span>
+        
+<span  class="values"><input type="password"  placeholder="Confirm Password" [(ngModel)]="reqobj.ConfirmPassword" name="cpwd"></span>
+</div>
+<div style="clear:both;">
+                <p  style="text-align:center;">{{errormsg}}</p>
+        </div>
+<button (click)="redirectloginpage()" style="display:block;margin:auto;">Register</button>
+
+</form>
+

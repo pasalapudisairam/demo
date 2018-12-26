@@ -1,0 +1,21 @@
+
+<h2>Home Page</h2>
+<hr>
+<div class="maindiv">
+        
+<span class="keys">E-mail:</span>
+<span  class="values"><input type="email" placeholder="Email Id" [(ngModel)]="singupobj.Email"></span>
+</div>
+<div class="maindiv">
+    <span class="keys">Password:</span>
+    <span  class="values"><input type="password" placeholder="Password"  [(ngModel)]="singupobj.Password"></span>
+</div>    
+<div style="clear:both;">
+<p  style="text-align:center;">{{errormsg}}</p>
+
+    </div>
+        <div style="display:block;margin:auto;width:200px;">
+<button (click)="login()" >Login</button>
+<button (click)="redirectingregisterpage()">Register</button>
+        </div>
+

@@ -1,0 +1,75 @@
+  
+    <div class="maindiv">
+        <span class="keys">Student Id:</span>
+        <span  class="values"><input type="number" [(ngModel)]="userdetails.StudentId" required></span>
+    </div>
+    <div class="maindiv">
+<span class="keys">Student Name:</span>
+<span  class="values"><input type="text" [(ngModel)]="userdetails.StudentName"></span>
+    </div>
+    
+    <div class="maindiv">
+        
+<span class="keys">Eamil:</span>
+<span class="values"><input type="email" [(ngModel)]="userdetails.Email"></span>
+    </div>
+    
+    <div class="maindiv">
+<span class="keys">Class:</span>
+<span class="values"><input type="text" [(ngModel)]="userdetails.Class"></span>
+    
+    </div>
+    <div class="maindiv">
+        
+<span class="keys">Enivironment Year:</span>
+<span  class="values"><input type="number" [(ngModel)]="userdetails.EnivironmentYear"></span>
+    </div>
+    
+    <div class="maindiv">
+        
+<span class="keys">City:</span>
+<span class="values"><input type="text" [(ngModel)]="userdetails.City"></span>
+    </div>
+    <div class="maindiv">
+        
+<span class="keys">Country:</span>
+<span  class="values"><input type="text" [(ngModel)]="userdetails.Country"></span>
+    </div>
+    <div style="clear:both;">
+        </div>        
+        <div  style="display:block;margin:auto;width:200px;">
+<button (click)="userdeta('Add','data')" >Save</button>
+      
+<button (click)="clear()" >Clear</button>
+        </div>
+<table style="width:100%" >
+    <tr>
+      <th>Id</th>
+      <th>Name</th> 
+      <th>Email</th>
+      <th>class</th>
+      <th>Year</th>
+      <th>City</th>
+      <th>Country</th>
+      <th>Edit</th>
+      <th>Delete</th>
+      
+    </tr>
+    <tbody *ngFor="let data of userdataarraya; let i=index ">
+    <tr>
+     <td>{{data.StudentId}}</td>
+      <td>{{data.StudentName}}</td>
+      <td>{{data.Email}}</td>
+      <td>{{data.Class}}</td>
+      <td>{{data.EnivironmentYear}}</td>
+      <td>{{data.City}}</td>
+      <td>{{data.Country}}</td>
+      <td><i class="material-icons" (click)="userdeta('Edit',data,i)">border_color</i>
+      </td>
+      <td><i class="material-icons" (click)="userdeta('Delete',data,i)">delete</i>
+      </td>
+      
+    </tr>
+    </tbody>
+  </table>
+  
